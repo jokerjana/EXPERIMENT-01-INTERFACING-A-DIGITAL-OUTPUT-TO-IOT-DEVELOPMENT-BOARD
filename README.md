@@ -2,12 +2,16 @@
 
 
 **DATE:**
+20.03.2025
 
 **NAME:**
+JANARTHANAN B
 
 **ROLL NO:**
+212223100014
 
 **DEPARTMENT:**
+CSE(CS)
 
 ## Aim
 
@@ -85,10 +89,34 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ## STM 32 CUBE PROGRAM
 
 ```c
-// Your STM 32 CUBE Program code here
+int main(void)
+{
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(3000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(3000);
+  }
+}
 ```
 
 ## OUTPUT
+### OFF:
+
+![iot output OFF](https://github.com/user-attachments/assets/f426f5dc-403b-4bd8-862d-a78a76f4b03f)
+
+
+### ON:
+
+![iot output ON](https://github.com/user-attachments/assets/11a61cce-5922-4a6f-8df6-2df8c36dadcf)
+
 
 ## Result
 
